@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="acadgild">
+	<head>
+		<title>Assignment 12.1</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+		<script>
+			var myapp = angular.module('acadgild', []);
+
+			myapp.controller('mycontroller1', function($scope) {
+				$scope.name = ["Garima","Rishi","Razat","Kavya"];
+			});
+
+		</script>
+	</head>
+	<body>
+		<div ng-controller="mycontroller1">
+			<ul ng-repeat="n in name">
+				<li>{{n | uppercase}}</li>
+			</ul>
+		</div>
+	</body>
+</html>
